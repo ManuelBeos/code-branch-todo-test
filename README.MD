@@ -2,14 +2,34 @@
 
 This is a simple Todo List application built with Go. It provides a RESTful API to manage tasks.
 
+## How to Start the App
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/manuelbeos/code-branch-todo-test.git
+    cd code-branch-todo-test
+    ```
+
+2. Install dependencies:
+    ```sh
+    go mod tidy
+    ```
+
+3. Run the application:
+    ```sh
+    go run cmd/api/main.go
+    ```
+
+4. The server will start on . http://localhost:8080
+
 ## Endpoints
 
 ### Health Check
-- **GET** `/health`
+- **GET** `/health` 
   - Response: `¡Server up!`
 
-### Tasks
-- **POST** `/tasks`
+### Tasks 
+- **POST** `/tasks` *(with random delay)*
   - Request Body:
     ```json
     {
@@ -29,7 +49,7 @@ This is a simple Todo List application built with Go. It provides a RESTful API 
     }
     ```
 
-- **GET** `/tasks`
+- **GET** `/tasks` *(with random delay)*
   - Response:
     ```json
     [
@@ -81,25 +101,6 @@ This is a simple Todo List application built with Go. It provides a RESTful API 
 - **DELETE** `/tasks/{id}`
   - Response: `204 No Content`
 
-## How to Start the App
-
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/manuelbeos/code-branch-todo-test.git
-    cd code-branch-todo-test
-    ```
-
-2. Install dependencies:
-    ```sh
-    go mod tidy
-    ```
-
-3. Run the application:
-    ```sh
-    go run cmd/api/main.go
-    ```
-
-4. The server will start on . http://localhost:8080
 
 ## Examples
 
