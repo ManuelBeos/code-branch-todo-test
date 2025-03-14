@@ -28,6 +28,10 @@ This is a simple Todo List application built with Go. It provides a RESTful API 
 - **GET** `/health` 
   - Response: `¡Server up!`
 
+### Swagger
+- **GET** `/docs/index.html` 
+  - Swagger documentation
+
 ### Tasks 
 - **POST** `/tasks` *(with random delay)*
   - Request Body:

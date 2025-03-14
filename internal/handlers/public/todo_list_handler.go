@@ -74,6 +74,17 @@ func (tlh *TodoListHandler) GetAllTasks(w http.ResponseWriter, r *http.Request) 
 	handler_utils.HandlerSuccessResponse(w, http.StatusOK, tasks)
 }
 
+// GetTaskByID retrieves a task by its ID.
+// @Summary Get a task by ID
+// @Description Get a task by its ID
+// @Tags tasks
+// @Produce json
+// @Param id path string true "Task ID"
+// @Success 200 {object} entity.Task
+// @Failure 400 {object} dtos.ErrorResponse
+// @Failure 404 {object} dtos.ErrorResponse
+// @Failure 500 {object} dtos.ErrorResponse
+// @Router /tasks/{id} [get]
 func (tlh *TodoListHandler) GetTaskByID(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 
