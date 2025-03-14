@@ -28,6 +28,10 @@ func NewServer() *Server {
 		w.Write([]byte("¡Server up!"))
 	})
 
+	r.HandleFunc("/docs", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("¡Server up!"))
+	})
+
 	srv := &http.Server{
 		Addr:    ":8080",
 		Handler: r,
